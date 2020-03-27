@@ -1,0 +1,25 @@
+{
+    "name": "burhancelebi/blog",
+    "description": "Creating Blog Crud",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Burhan Çelebi",
+            "email": "burhan.celebi.2112@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Celebi\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Celebi\\Commands\\BlogCommandProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
