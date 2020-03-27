@@ -1,4 +1,3 @@
-Veritabanı dosyanın içindedir.
 
 " composer require burhancelebi/blog " komutunu çalıştır.
 
@@ -12,12 +11,6 @@ Paket composer'dan eklendiğinde yapılacaklar.
     gelecektir. Aynı zamanda kullanıcı arayüzünde de makaleler adlı link gelecektir.
 
 - Bir view dosyası oluşturmak için gereken komut : php artisan make:view viewname
-
-- http://package.test/login sayfasından Email : burhan.celebi.2112@gmail.com , Şifre : burhan21 
-bilgileri ile giriş yapınız.
-
-- Admin paneli linki : http://package.test/bpanel
-
 
 - Kullanıcı yetkileri policy ile yapıldı .
 - Admin herşeyi yapabilir .
