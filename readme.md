@@ -6,4 +6,4 @@ Run "composer require burhancelebi/blog ".
 - Run " php artisan config:cache ".
 - Run " php artisan blog:builder ".
 
-- If you want to create a blade file , Run php artisan make:view viewname
+- If you want to create a blade file , run php artisan make:view viewname
