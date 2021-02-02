@@ -2,9 +2,9 @@
 
 namespace Celebi\Commands;
 
+use File;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Route;
-use File;
 
 class BlogRouteCommand extends Command
 {
@@ -39,9 +39,8 @@ class BlogRouteCommand extends Command
      */
     public function handle()
     {
-        if ( !Route::has('blogs.store') ) {
-
-            $path = "routes/web.php";
+        if (!Route::has('blogs.store')) {
+            $path = 'routes/web.php';
 
             File::append($path, file_get_contents(dirname(__DIR__).'\stubs\route.stub'));
         }

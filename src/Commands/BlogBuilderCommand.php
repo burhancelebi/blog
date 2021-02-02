@@ -2,8 +2,8 @@
 
 namespace Celebi\Commands;
 
-use Illuminate\Console\Command;
 use Artisan;
+use Illuminate\Console\Command;
 
 class BlogBuilderCommand extends Command
 {
@@ -39,13 +39,13 @@ class BlogBuilderCommand extends Command
     public function handle()
     {
         Artisan::call('blog:migration');
-        $this->info("Blog migration is created.");
-        
+        $this->info('Blog migration is created.');
+
         Artisan::call('blog:route');
-        $this->info("blog route is created.");
-        
+        $this->info('blog route is created.');
+
         Artisan::call('blog:views');
-        $this->info("Blog views is created.");
+        $this->info('Blog views is created.');
 
         $this->info('Blog builder is completed');
     }

@@ -8,17 +8,12 @@ class Routes
 {
     public static function routes()
     {
-        Route::group(['prefix' => 'bpanel','namespace' => '\Celebi\Commands\Controllers'],function(){
-
-            Route::resource('blogs','BlogController')->middleware('auth');
-            
+        Route::group(['prefix' => 'bpanel', 'namespace' => '\Celebi\Commands\Controllers'], function () {
+            Route::resource('blogs', 'BlogController')->middleware('auth');
         });
 
-        Route::group(['namespace' => '\Celebi\Commands\Controllers'],function(){
-
-            Route::get('articles','ArticleController@index')->name('articles');
-
+        Route::group(['namespace' => '\Celebi\Commands\Controllers'], function () {
+            Route::get('articles', 'ArticleController@index')->name('articles');
         });
-
     }
 }

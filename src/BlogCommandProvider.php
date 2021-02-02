@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Celebi\Commands;
 
 use Illuminate\Support\ServiceProvider;

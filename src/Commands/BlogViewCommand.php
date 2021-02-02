@@ -2,8 +2,8 @@
 
 namespace Celebi\Commands;
 
-use Illuminate\Console\Command;
 use File;
+use Illuminate\Console\Command;
 
 class BlogViewCommand extends Command
 {
@@ -38,18 +38,17 @@ class BlogViewCommand extends Command
      */
     public function handle()
     {
-        $views = ['create','edit','index'];
-        
-        foreach ( $views as $value ) {
-            $path = "resources/views/admin/blog/".$value.'.blade.php';
+        $views = ['create', 'edit', 'index'];
+
+        foreach ($views as $value) {
+            $path = 'resources/views/admin/blog/'.$value.'.blade.php';
 
             $this->createDir($path);
-            
-            File::put($path, file_get_contents(dirname(__DIR__)."\stubs\blogs\\$value.blade.stub"));
 
+            File::put($path, file_get_contents(dirname(__DIR__)."\stubs\blogs\\$value.blade.stub"));
         }
 
-        $path = "resources/views/blogs.blade.php";
+        $path = 'resources/views/blogs.blade.php';
         File::put($path, file_get_contents(dirname(__DIR__)."\stubs\blogs.stub"));
     }
 
@@ -62,8 +61,7 @@ class BlogViewCommand extends Command
     {
         $dir = dirname($path);
 
-        if (!file_exists($dir))
-        {
+        if (!file_exists($dir)) {
             mkdir($dir, 0777, true);
         }
     }
