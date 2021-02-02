@@ -2,9 +2,9 @@
 
 namespace Celebi\Commands;
 
-use Illuminate\Support\ServiceProvider;
 use Celebi\Commands\Models\Blog;
 use Celebi\Commands\Observers\BlogObserver;
+use Illuminate\Support\ServiceProvider;
 
 class BlogServiceProvider extends ServiceProvider
 {
@@ -15,7 +15,7 @@ class BlogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('blog-routes', function(){
+        $this->app->bind('blog-routes', function () {
             return new Routes();
         });
     }
@@ -27,10 +27,10 @@ class BlogServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blog::observe( new BlogObserver() );
+        Blog::observe(new BlogObserver());
 
         $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations')
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], 'migrations');
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Celebi\Commands;
 
-use Illuminate\Console\Command;
 use File;
+use Illuminate\Console\Command;
 
 class MakeViewCommand extends Command
 {
@@ -44,9 +44,9 @@ class MakeViewCommand extends Command
 
         $this->createDir($path);
 
-        if (File::exists($path))
-        {
+        if (File::exists($path)) {
             $this->error("File {$path} already exists!");
+
             return;
         }
 
@@ -55,7 +55,7 @@ class MakeViewCommand extends Command
         $this->info("File {$path} created.");
     }
 
-     /**
+    /**
      * Get the view full path.
      *
      * @param string $view
@@ -64,7 +64,7 @@ class MakeViewCommand extends Command
      */
     public function viewPath($view)
     {
-        $view = str_replace('.', '/', $view) . '.blade.php';
+        $view = str_replace('.', '/', $view).'.blade.php';
 
         $path = "resources/views/{$view}";
 
@@ -80,10 +80,8 @@ class MakeViewCommand extends Command
     {
         $dir = dirname($path);
 
-        if (!file_exists($dir))
-        {
+        if (!file_exists($dir)) {
             mkdir($dir, 0777, true);
         }
     }
-
 }
